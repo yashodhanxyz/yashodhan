@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    title: 'Order.law',
+    label: 'Legal Tech · AI · Founder',
+    desc: 'AI-powered legal research and case management platform. Built end-to-end — product strategy, design system, front-end. 1.13M impressions, 28K+ users.',
+    meta: 'Oct 2024 – Present · Lead Product Designer & Founder',
+    link: 'https://order.law',
+  },
+  {
+    title: 'Zeni AI — Financial Operations',
+    label: 'Fintech · SaaS',
+    desc: 'Automated accounting, transaction management, and financial reporting workflows for an AI-powered finance platform. Led a team of 8 designers.',
+    meta: '2022 – 2024 · Lead Product Designer',
+    link: null,
+  },
+  {
+    title: 'Bajaj Finserv — Digital Lending',
+    label: 'Fintech · Mobile',
+    desc: 'End-to-end design for consumer durables finance, rural term loans, gold loans, and B2B/B2C platforms serving millions of customers.',
+    meta: '2021 – 2022 · Lead Product Designer',
+    link: null,
+  },
+];
+---
+
+<BaseLayout title="Projects" description="Selected product design work by Yashodhan Deshmukh.">
+  <div class="container">
+
+    <header class="page-header">
+      <p class="page-header__label">Projects</p>
+      <h1 class="page-header__title">Selected work</h1>
+      <p class="page-header__desc">
+        Products I've designed and built — from fintech platforms to AI-powered tools.
+      </p>
+    </header>
+
+    <div class="project-row">
+      {projects.map(p => (
+        <div class="project-item">
+          <div class="project-item__inner">
+            <p class="project-item__label">{p.label}</p>
+            <h2 class="project-item__title">{p.title}</h2>
+            <p class="project-item__desc">{p.desc}</p>
+            <p class="project-item__meta">{p.meta}</p>
+          </div>
+          {p.link
+            ? <a href={p.link} target="_blank" rel="noopener" class="project-item__arrow" aria-label={`Visit ${p.title}`}>↗</a>
+            : <span class="project-item__arrow" style="opacity:0">↗</span>
+          }
+        </div>
+      ))}
+    </div>
+
+    <p class="footer-note">
+      Detailed case studies available on request. <a href="/contact">Get in touch →</a>
+    </p>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .footer-note {
+    margin-top: 2.5rem;
+    font-size: 0.875rem;
+    color: var(--text-3);
+  }
+
+  .footer-note a {
+    color: var(--accent);
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    transition: border-color 0.15s;
+  }
+
+  .footer-note a:hover { border-color: var(--accent); }
+</style>

@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Get in touch" description="Contact Yashodhan Deshmukh — Lead Product Designer.">
+  <div class="container">
+
+    <header class="page-header">
+      <p class="page-header__label">Contact</p>
+      <h1 class="page-header__title">Let's talk.</h1>
+      <p class="page-header__desc">
+        Whether it's a design opportunity, a product challenge, or just a conversation — I'm happy to connect.
+      </p>
+    </header>
+
+    <div class="contact-split">
+      <div>
+        <a href="mailto:yashodhan.de@gmail.com" class="contact-link">
+          <p class="contact-link__label">Email</p>
+          <p class="contact-link__value">yashodhan.de@gmail.com</p>
+        </a>
+        <a href="https://linkedin.com/in/yashodhan" target="_blank" rel="noopener" class="contact-link">
+          <p class="contact-link__label">LinkedIn</p>
+          <p class="contact-link__value">linkedin.com/in/yashodhan</p>
+        </a>
+        <a href="tel:+917385108501" class="contact-link">
+          <p class="contact-link__label">Phone</p>
+          <p class="contact-link__value">+91 738 510 8501</p>
+        </a>
+      </div>
+
+      <form class="form" name="contact" method="POST">
+        <p class="form-label">Send a message</p>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com" />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required rows="5" placeholder="What's on your mind?"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn btn--primary">Send message</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</BaseLayout>

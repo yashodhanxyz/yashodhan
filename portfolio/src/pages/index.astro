@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home" description="Yashodhan Deshmukh — Lead Product Designer with 15+ years simplifying complex systems.">
+  <div class="container">
+
+    <section class="hero">
+      <p class="hero__eyebrow">Lead Product Designer</p>
+
+      <h1 class="hero__heading">
+        Making&nbsp;complex<br />
+        things <em>feel simple.</em>
+      </h1>
+
+      <p class="hero__sub">
+        I'm Yashodhan — a product designer with 15+ years building digital experiences across fintech, SaaS, and emerging tech. Currently building <a href="https://order.law" target="_blank" rel="noopener">Order.law</a>, an AI-powered legal research platform.
+      </p>
+
+      <div class="hero__cta">
+        <a href="/projects" class="btn btn--primary">View Projects</a>
+        <a href="/about" class="btn btn--ghost">About me</a>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="section">
+      <p class="section__eyebrow">What I do</p>
+      <div class="grid">
+        <div class="card">
+          <span class="card__label">UX & Product</span>
+          <p class="card__title">Systems thinking</p>
+          <p class="card__desc">Turning complex workflows into clear, intuitive interfaces — finance, legal, enterprise.</p>
+        </div>
+        <div class="card">
+          <span class="card__label">Design Systems</span>
+          <p class="card__title">Scalable foundations</p>
+          <p class="card__desc">Building the shared language that keeps teams aligned as products grow.</p>
+        </div>
+        <div class="card">
+          <span class="card__label">Product Strategy</span>
+          <p class="card__title">Design that ships</p>
+          <p class="card__desc">End-to-end — from research through prototyping to working with engineers.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="section">
+      <p class="section__eyebrow">Currently building</p>
+      <div class="feature-block">
+        <div>
+          <p class="feature-block__label">Founder · Oct 2024 – Present</p>
+          <h2 class="feature-block__title">Order.law</h2>
+          <p class="feature-block__desc">
+            An AI-powered legal research and case management platform for lawyers.
+            1.13M search impressions, 28K+ users through product-led growth.
+          </p>
+          <div class="feature-block__tags">
+            <span class="tag">Legal Tech</span>
+            <span class="tag">AI</span>
+            <span class="tag">Founder</span>
+          </div>
+        </div>
+        <a href="https://order.law" target="_blank" rel="noopener" class="feature-block__link" aria-label="Visit Order.law">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 13L13 3M13 3H7M13 3v6"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .feature-block__label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-block__title {
+    font-size: 1.375rem;
+    font-weight: 580;
+    letter-spacing: -0.025em;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+  }
+
+  .feature-block__desc {
+    font-size: 0.9rem;
+    color: var(--text-3);
+    max-width: 50ch;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  .feature-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .feature-block__link {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-med);
+    color: var(--text-3);
+    transition: all 0.15s var(--ease);
+    flex-shrink: 0;
+  }
+
+  .feature-block__link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    transform: translate(1px, -1px);
+  }
+</style>

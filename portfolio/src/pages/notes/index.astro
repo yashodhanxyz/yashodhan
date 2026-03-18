@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allNotes = await getCollection('notes', ({ data }) => !data.draft);
+const sorted = allNotes.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+function formatDate(d: Date) {
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+---
+
+<BaseLayout title="Notes" description="Thoughts on design, product, and building — by Yashodhan Deshmukh.">
+  <div class="container">
+
+    <header class="page-header">
+      <p class="page-header__label">Notes</p>
+      <h1 class="page-header__title">Writing</h1>
+      <p class="page-header__desc">
+        Thoughts on design, product thinking, and the craft of building things people use.
+      </p>
+    </header>
+
+    {sorted.length === 0
+      ? <p class="text-muted" style="font-size:0.9rem">No notes yet.</p>
+      : (
+        <ul class="post-list">
+          {sorted.map(note => (
+            <li class="post-list__item">
+              <a class="post-list__link" href={`/notes/${note.id}`}>{note.data.title}</a>
+              <time class="post-list__date" datetime={note.data.date.toISOString()}>
+                {formatDate(note.data.date)}
+              </time>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+  </div>
+</BaseLayout>

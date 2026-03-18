@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Experiments" description="Side projects and design experiments by Yashodhan Deshmukh.">
+  <div class="container">
+
+    <header class="page-header">
+      <p class="page-header__label">Experiments</p>
+      <h1 class="page-header__title">Tinkering</h1>
+      <p class="page-header__desc">
+        Side projects, design explorations, and things I'm figuring out — no deadlines, just curiosity.
+      </p>
+    </header>
+
+    <div class="empty-state">
+      <p class="empty-state__text">Something's brewing.</p>
+      <p class="empty-state__sub">Check back soon.</p>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .empty-state {
+    padding: 6rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .empty-state__text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.02em;
+  }
+
+  .empty-state__sub {
+    font-size: 0.875rem;
+    color: var(--text-3);
+  }
+</style>
