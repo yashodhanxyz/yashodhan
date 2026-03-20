@@ -1,0 +1,881 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Styleguide" description="Design system reference for yashodhan.design">
+<div class="sg-wrap">
+
+  <!-- Header -->
+  <div class="sg-header">
+    <p class="sg-header__label">Internal reference</p>
+    <h1 class="sg-header__title">Styleguide</h1>
+    <p class="sg-header__desc">
+      All tokens, typography, and components in one place. Use the theme toggle in the sidebar to preview light and dark.
+    </p>
+  </div>
+
+  <!-- ============ COLOUR ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Colour</h2>
+    <p class="sg-section__note">Tokens are CSS custom properties on <code>:root</code> and <code>[data-theme="dark"]</code>. The left chip is light mode, the right chip is dark mode.</p>
+
+    <div class="sg-color-grid">
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:#F7F3ED; border:1px solid rgba(0,0,0,0.1)"></span>
+          <span class="sg-chip" style="background:#111009"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--bg</p>
+          <p class="sg-color-values"><code>#F7F3ED</code> / <code>#111009</code></p>
+          <p class="sg-color-usage">Page background</p>
+        </div>
+      </div>
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:#EEE9E1; border:1px solid rgba(0,0,0,0.1)"></span>
+          <span class="sg-chip" style="background:#1A1813"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--bg-2</p>
+          <p class="sg-color-values"><code>#EEE9E1</code> / <code>#1A1813</code></p>
+          <p class="sg-color-usage">Subtle background, hover states, tags</p>
+        </div>
+      </div>
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:#FDFAF6; border:1px solid rgba(0,0,0,0.1)"></span>
+          <span class="sg-chip" style="background:#201E18"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--surface</p>
+          <p class="sg-color-values"><code>#FDFAF6</code> / <code>#201E18</code></p>
+          <p class="sg-color-usage">Cards, form inputs, elevated surfaces</p>
+        </div>
+      </div>
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:rgba(0,0,0,0.08); border:1px solid rgba(0,0,0,0.1)"></span>
+          <span class="sg-chip" style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.2)"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--border</p>
+          <p class="sg-color-values"><code>rgba(0,0,0,0.08)</code> / <code>rgba(255,255,255,0.07)</code></p>
+          <p class="sg-color-usage">Subtle dividers, card edges</p>
+        </div>
+      </div>
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:rgba(0,0,0,0.15); border:1px solid rgba(0,0,0,0.1)"></span>
+          <span class="sg-chip" style="background:rgba(255,255,255,0.13); border:1px solid rgba(255,255,255,0.2)"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--border-med</p>
+          <p class="sg-color-values"><code>rgba(0,0,0,0.15)</code> / <code>rgba(255,255,255,0.13)</code></p>
+          <p class="sg-color-usage">Hover state borders, form inputs</p>
+        </div>
+      </div>
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:#18160F"></span>
+          <span class="sg-chip" style="background:#F2EDE5"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--text</p>
+          <p class="sg-color-values"><code>#18160F</code> / <code>#F2EDE5</code></p>
+          <p class="sg-color-usage">Headings, primary text, high-emphasis</p>
+        </div>
+      </div>
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:#4A4740"></span>
+          <span class="sg-chip" style="background:#C8BFB0"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--text-2</p>
+          <p class="sg-color-values"><code>#4A4740</code> / <code>#C8BFB0</code></p>
+          <p class="sg-color-usage">Body copy, descriptions</p>
+        </div>
+      </div>
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:#8A847C"></span>
+          <span class="sg-chip" style="background:#6E685F"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--text-3</p>
+          <p class="sg-color-values"><code>#8A847C</code> / <code>#6E685F</code></p>
+          <p class="sg-color-usage">Muted text, labels, dates, metadata</p>
+        </div>
+      </div>
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:#C94B00"></span>
+          <span class="sg-chip" style="background:#E05A10"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--accent</p>
+          <p class="sg-color-values"><code>#C94B00</code> / <code>#E05A10</code></p>
+          <p class="sg-color-usage">Links, labels, eyebrows, active states, the dot. Use sparingly.</p>
+        </div>
+      </div>
+
+      <div class="sg-color-row">
+        <div class="sg-color-chips">
+          <span class="sg-chip" style="background:rgba(201,75,0,0.08); border:1px solid rgba(0,0,0,0.1)"></span>
+          <span class="sg-chip" style="background:rgba(224,90,16,0.12); border:1px solid rgba(255,255,255,0.2)"></span>
+        </div>
+        <div class="sg-color-info">
+          <p class="sg-color-name">--accent-dim</p>
+          <p class="sg-color-values"><code>rgba(201,75,0,0.08)</code> / <code>rgba(224,90,16,0.12)</code></p>
+          <p class="sg-color-usage">Accent background tint for hover states</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TYPOGRAPHY ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Typography</h2>
+    <p class="sg-section__note">Two typefaces: <strong>Fraunces</strong> (display/editorial, optical size aware) for hero headlines and italic accents. <strong>Inter</strong> for everything else.</p>
+
+    <div class="sg-type-stack">
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>Hero heading</code>
+          <span>Fraunces 600 · clamp(3rem→5rem) · tracking -0.04em · lh 0.97</span>
+        </div>
+        <p class="sg-type-sample" style="font-family:var(--font-display); font-weight:600; font-size:clamp(2.5rem,5vw,4rem); letter-spacing:-0.04em; line-height:0.97; color:var(--text)">
+          Making complex<br/>things feel simple.
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>Hero italic</code>
+          <span>Fraunces 300 italic · same scale · accent colour</span>
+        </div>
+        <p class="sg-type-sample" style="font-family:var(--font-display); font-weight:300; font-style:italic; font-size:clamp(2.5rem,5vw,4rem); letter-spacing:-0.04em; line-height:0.97; color:var(--accent)">
+          feel simple.
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>Page title</code>
+          <span>Inter 600 · clamp(2.25rem→3.5rem) · tracking -0.035em · lh 1.0</span>
+        </div>
+        <p class="sg-type-sample" style="font-weight:600; font-size:clamp(2rem,4vw,3rem); letter-spacing:-0.035em; line-height:1.0; color:var(--text)">
+          Selected work
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>H2 / Section title</code>
+          <span>Inter 580 · 1.375rem · tracking -0.02em</span>
+        </div>
+        <p class="sg-type-sample" style="font-weight:580; font-size:1.375rem; letter-spacing:-0.02em; color:var(--text)">
+          Design systems that scale
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>H3 / Card title</code>
+          <span>Inter 580 · 0.9375rem · tracking -0.01em</span>
+        </div>
+        <p class="sg-type-sample" style="font-weight:580; font-size:0.9375rem; letter-spacing:-0.01em; color:var(--text)">
+          Scalable foundations
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>Body</code>
+          <span>Inter 400 · 1rem · lh 1.65 · --text-2</span>
+        </div>
+        <p class="sg-type-sample" style="font-size:1rem; line-height:1.65; color:var(--text-2); max-width:55ch">
+          I believe the best design is invisible — it just works. My approach combines strong product thinking with storytelling-driven design, turning complex systems into experiences people actually want to use.
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>Body large</code>
+          <span>Inter 400 · 1.0625rem · lh 1.75 · --text-2</span>
+        </div>
+        <p class="sg-type-sample" style="font-size:1.0625rem; line-height:1.75; color:var(--text-2); max-width:55ch">
+          Lead Product Designer with 15+ years building digital products across fintech, SaaS, and emerging technologies.
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>Small / Meta</code>
+          <span>Inter 400 · 0.8125rem · --text-3</span>
+        </div>
+        <p class="sg-type-sample" style="font-size:0.8125rem; color:var(--text-3)">
+          Jan 10, 2025 · Design Systems
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>Eyebrow / Label</code>
+          <span>Inter 600 · 0.675rem · uppercase · tracking 0.1em · --text-3</span>
+        </div>
+        <p class="sg-type-sample" style="font-size:0.675rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-3)">
+          Lead Product Designer
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>Accent label</code>
+          <span>Inter 600 · 0.675rem · uppercase · tracking 0.1em · --accent</span>
+        </div>
+        <p class="sg-type-sample" style="font-size:0.675rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent)">
+          Currently building
+        </p>
+      </div>
+
+      <div class="sg-type-row">
+        <div class="sg-type-label">
+          <code>Mono / Code</code>
+          <span>JetBrains Mono · 0.875em · --bg-2 background</span>
+        </div>
+        <p class="sg-type-sample"><code style="font-size:0.9rem; background:var(--bg-2); padding:0.15em 0.4em; border-radius:4px">var(--accent)</code></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SPACING ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Spacing & Layout</h2>
+    <p class="sg-section__note">No spacing scale tokens — spacing is set directly per component. Key structural values below.</p>
+
+    <div class="sg-token-grid">
+      <div class="sg-token">
+        <p class="sg-token__name"><code>--sidebar-w</code></p>
+        <p class="sg-token__val">220px</p>
+        <p class="sg-token__desc">Fixed sidebar width</p>
+      </div>
+      <div class="sg-token">
+        <p class="sg-token__name"><code>--content-max</code></p>
+        <p class="sg-token__val">820px</p>
+        <p class="sg-token__desc">Max content width</p>
+      </div>
+      <div class="sg-token">
+        <p class="sg-token__name"><code>--content-pad</code></p>
+        <p class="sg-token__val">3.5rem</p>
+        <p class="sg-token__desc">Main content padding</p>
+      </div>
+      <div class="sg-token">
+        <p class="sg-token__name"><code>--radius-sm</code></p>
+        <p class="sg-token__val">4px</p>
+        <p class="sg-token__desc">Tags, code, small elements</p>
+      </div>
+      <div class="sg-token">
+        <p class="sg-token__name"><code>--radius</code></p>
+        <p class="sg-token__val">8px</p>
+        <p class="sg-token__desc">Buttons, inputs, cards</p>
+      </div>
+      <div class="sg-token">
+        <p class="sg-token__name"><code>--radius-lg</code></p>
+        <p class="sg-token__val">14px</p>
+        <p class="sg-token__desc">Tile grid, feature block</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUTTONS ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Buttons</h2>
+    <p class="sg-section__note">Two variants. Primary uses <code>--text</code> as background (not accent) — keeps accent colour meaningful. Ghost for secondary actions.</p>
+
+    <div class="sg-component-row">
+      <div class="sg-component-item">
+        <a href="#" class="btn btn--primary" onclick="return false">View Projects</a>
+        <p class="sg-component-label"><code>.btn.btn--primary</code></p>
+      </div>
+      <div class="sg-component-item">
+        <a href="#" class="btn btn--ghost" onclick="return false">About me</a>
+        <p class="sg-component-label"><code>.btn.btn--ghost</code></p>
+      </div>
+      <div class="sg-component-item">
+        <div style="display:flex;gap:0.875rem">
+          <a href="#" class="btn btn--primary" onclick="return false">Primary</a>
+          <a href="#" class="btn btn--ghost" onclick="return false">Ghost</a>
+        </div>
+        <p class="sg-component-label">Typical pairing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAGS ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Tags & Labels</h2>
+    <p class="sg-section__note">Tags are pill-shaped, always muted — never accent. Accent labels are only used as category/type indicators above headings.</p>
+
+    <div class="sg-component-row">
+      <div class="sg-component-item">
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem">
+          <span class="tag">Design Systems</span>
+          <span class="tag">Fintech</span>
+          <span class="tag">Legal Tech</span>
+          <span class="tag">AI</span>
+          <span class="tag">Founder</span>
+        </div>
+        <p class="sg-component-label"><code>.tag</code> — pill, muted</p>
+      </div>
+      <div class="sg-component-item">
+        <p style="font-size:0.675rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent)">Currently building</p>
+        <p class="sg-component-label">Accent label — used above headings only</p>
+      </div>
+      <div class="sg-component-item">
+        <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.7rem;color:var(--text-3);font-weight:500">
+          <span style="width:6px;height:6px;border-radius:50%;background:#3D9A50;display:inline-block"></span>
+          Available for work
+        </div>
+        <p class="sg-component-label">Status indicator</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TILE GRID ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Tile Grid</h2>
+    <p class="sg-section__note">Used on the home page for "What I do". A grid of tiles with shared borders using the <code>gap: 1px + background: var(--border-med)</code> technique — no individual card borders needed.</p>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <span class="tile__label">UX & Product</span>
+        <p class="tile__title">Systems thinking</p>
+        <p class="tile__desc">Turning complex workflows into clear, intuitive interfaces — finance, legal, enterprise.</p>
+      </div>
+      <div class="tile">
+        <span class="tile__label">Design Systems</span>
+        <p class="tile__title">Scalable foundations</p>
+        <p class="tile__desc">Building the shared language that keeps teams aligned as products grow.</p>
+      </div>
+      <div class="tile">
+        <span class="tile__label">Product Strategy</span>
+        <p class="tile__title">Design that ships</p>
+        <p class="tile__desc">End-to-end — from research through prototyping to working with engineers.</p>
+      </div>
+    </div>
+    <p class="sg-component-label" style="margin-top:0.875rem"><code>.tile-grid</code> wraps <code>.tile</code> children</p>
+  </section>
+
+  <!-- ============ FEATURE BLOCK ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Feature Block</h2>
+    <p class="sg-section__note">Used for highlighted projects or "currently building." The 3px left accent bar is the only use of a solid accent colour in a structural element.</p>
+
+    <div class="feature-block">
+      <div>
+        <p class="feature-block__label">Founder · Oct 2024 – Present</p>
+        <h3 class="feature-block__title">Order.law</h3>
+        <p class="feature-block__desc">An AI-powered legal research and case management platform. 1.13M search impressions, 28K+ users.</p>
+        <div class="feature-block__tags">
+          <span class="tag">Legal Tech</span>
+          <span class="tag">AI</span>
+          <span class="tag">Founder</span>
+        </div>
+      </div>
+      <a href="#" class="feature-block__link" onclick="return false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 13L13 3M13 3H7M13 3v6"/>
+        </svg>
+      </a>
+    </div>
+    <p class="sg-component-label" style="margin-top:0.875rem"><code>.feature-block</code></p>
+  </section>
+
+  <!-- ============ SECTION EYEBROW ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Section Eyebrow</h2>
+    <p class="sg-section__note">Used to label sections. The <code>::after</code> pseudo-element extends a full-width hairline rule. Always uppercase, muted, never accent.</p>
+
+    <div class="sg-demo-block">
+      <p class="section__eyebrow">Currently building</p>
+      <p class="section__eyebrow">What I do</p>
+      <p class="section__eyebrow">Experience</p>
+    </div>
+    <p class="sg-component-label"><code>.section__eyebrow</code></p>
+  </section>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Page Header</h2>
+    <p class="sg-section__note">Used at the top of every inner page. Label has a short accent line prefix via <code>::before</code>.</p>
+
+    <div class="sg-demo-block">
+      <div class="page-header" style="margin-bottom:0">
+        <p class="page-header__label">Projects</p>
+        <h2 class="page-header__title" style="font-size:clamp(1.75rem,4vw,2.5rem)">Selected work</h2>
+        <p class="page-header__desc">Products I've designed and built — from fintech platforms to AI-powered tools.</p>
+      </div>
+    </div>
+    <p class="sg-component-label"><code>.page-header</code> → <code>__label</code> <code>__title</code> <code>__desc</code></p>
+  </section>
+
+  <!-- ============ DIVIDER ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Divider</h2>
+    <p class="sg-section__note">A single 1px rule using <code>--border</code>. Always <code>margin: 3.5rem 0</code>. Used to separate major sections on a page.</p>
+
+    <div class="sg-demo-block">
+      <p style="font-size:0.8rem;color:var(--text-3);margin-bottom:1.5rem">Content above</p>
+      <hr class="divider" style="margin:0 0 1.5rem"/>
+      <p style="font-size:0.8rem;color:var(--text-3)">Content below</p>
+    </div>
+    <p class="sg-component-label"><code>.divider</code></p>
+  </section>
+
+  <!-- ============ POST LIST ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Post List</h2>
+    <p class="sg-section__note">Used on the Notes index. Title on the left, date tabular on the right. Hover shifts title to <code>--text</code>.</p>
+
+    <ul class="post-list">
+      <li class="post-list__item">
+        <a class="post-list__link" href="#">Design systems that actually scale</a>
+        <time class="post-list__date">Jan 10, 2025</time>
+      </li>
+      <li class="post-list__item">
+        <a class="post-list__link" href="#">Designing for complexity without making it complicated</a>
+        <time class="post-list__date">Feb 20, 2025</time>
+      </li>
+      <li class="post-list__item">
+        <a class="post-list__link" href="#">What 15 years of product design actually taught me</a>
+        <time class="post-list__date">Mar 5, 2025</time>
+      </li>
+    </ul>
+    <p class="sg-component-label" style="margin-top:0.875rem"><code>.post-list</code> → <code>.post-list__item</code> → <code>.post-list__link</code> + <code>.post-list__date</code></p>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Timeline</h2>
+    <p class="sg-section__note">Two-column grid: date on the left (110px), content on the right. Separated by border-bottom, not decorative dots or lines.</p>
+
+    <div class="timeline">
+      <div class="timeline__item">
+        <div class="timeline__left">
+          <p class="timeline__period">Oct 2024<br/>Present</p>
+        </div>
+        <div class="timeline__right">
+          <p class="timeline__role">Founder & Lead Product Designer</p>
+          <p class="timeline__company">Order.law</p>
+          <ul class="timeline__points">
+            <li>Designed and built an AI-powered legal research platform end-to-end.</li>
+            <li>Led product design, front-end development, and API integration.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__left">
+          <p class="timeline__period">Jun 2022<br/>Aug 2024</p>
+        </div>
+        <div class="timeline__right">
+          <p class="timeline__role">Lead Product Designer</p>
+          <p class="timeline__company">Zeni AI</p>
+          <ul class="timeline__points">
+            <li>Led design for an AI-powered financial operations platform.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="sg-component-label" style="margin-top:0.875rem"><code>.timeline</code> → <code>.timeline__item</code> → <code>.timeline__left</code> + <code>.timeline__right</code></p>
+  </section>
+
+  <!-- ============ PROJECT ROW ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Project Row</h2>
+    <p class="sg-section__note">Used on the Projects page. Arrow glyph in top-right is hidden by default and becomes accent-coloured on hover, translating diagonally.</p>
+
+    <div class="project-row">
+      <div class="project-item">
+        <div class="project-item__inner">
+          <p class="project-item__label">Legal Tech · AI · Founder</p>
+          <h3 class="project-item__title">Order.law</h3>
+          <p class="project-item__desc">AI-powered legal research platform. 1.13M impressions, 28K+ users through product-led growth.</p>
+          <p class="project-item__meta">Oct 2024 – Present · Lead Product Designer & Founder</p>
+        </div>
+        <span class="project-item__arrow">↗</span>
+      </div>
+    </div>
+    <p class="sg-component-label" style="margin-top:0.875rem"><code>.project-row</code> → <code>.project-item</code></p>
+  </section>
+
+  <!-- ============ FORMS ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Forms</h2>
+    <p class="sg-section__note">Inputs use <code>--surface</code> background and <code>--border-med</code> default border. Focus state rings in <code>--accent</code>. No shadows.</p>
+
+    <div class="sg-demo-block" style="max-width:420px">
+      <div class="form">
+        <div class="field">
+          <label for="sg-name">Name</label>
+          <input type="text" id="sg-name" placeholder="Your name" />
+        </div>
+        <div class="field">
+          <label for="sg-email">Email</label>
+          <input type="email" id="sg-email" placeholder="you@example.com" />
+        </div>
+        <div class="field">
+          <label for="sg-msg">Message</label>
+          <textarea id="sg-msg" rows="3" placeholder="What's on your mind?"></textarea>
+        </div>
+        <div>
+          <button class="btn btn--primary">Send message</button>
+        </div>
+      </div>
+    </div>
+    <p class="sg-component-label" style="margin-top:0.875rem"><code>.form</code> → <code>.field</code> → <code>label</code> + <code>input/textarea</code></p>
+  </section>
+
+  <!-- ============ PROSE ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Prose</h2>
+    <p class="sg-section__note">Applied to blog post bodies via <code>.prose</code>. Uses <code>--text-2</code> for body, <code>--text</code> for headings, and <code>--accent</code> for links with underline.</p>
+
+    <div class="sg-demo-block prose" style="max-width:560px">
+      <h2>Design systems that scale</h2>
+      <p>A design system isn't a component library. That's the mistake I see most teams make. A component library is a collection of UI elements. A design system is the <strong>shared language</strong> — the decisions, principles, and documentation.</p>
+      <blockquote>The best design system is the one your team actually uses.</blockquote>
+      <h3>What gets teams in trouble</h3>
+      <p>Nobody could answer <a href="#">"is this in the design system?"</a> with confidence. You can use <code>var(--accent)</code> inline like this.</p>
+      <ul>
+        <li>Document the why, not just the what</li>
+        <li>Treat inconsistency as a bug</li>
+        <li>Design systems are living docs</li>
+      </ul>
+    </div>
+    <p class="sg-component-label" style="margin-top:0.875rem"><code>.prose</code> — applied to markdown-rendered content</p>
+  </section>
+
+  <!-- ============ CONTACT LINKS ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Contact Links</h2>
+    <p class="sg-section__note">Used on the Contact page. Each link is block-level, separated by border-bottom, label + value stacked vertically.</p>
+
+    <div style="max-width:300px">
+      <a href="#" class="contact-link" onclick="return false">
+        <p class="contact-link__label">Email</p>
+        <p class="contact-link__value">yashodhan.de@gmail.com</p>
+      </a>
+      <a href="#" class="contact-link" onclick="return false">
+        <p class="contact-link__label">LinkedIn</p>
+        <p class="contact-link__value">linkedin.com/in/yashodhan</p>
+      </a>
+    </div>
+    <p class="sg-component-label" style="margin-top:0.875rem"><code>.contact-link</code> → <code>__label</code> + <code>__value</code></p>
+  </section>
+
+  <!-- ============ DARK PREVIEW ============ -->
+  <section class="sg-section">
+    <h2 class="sg-section__title">Dark mode preview</h2>
+    <p class="sg-section__note">A forced dark swatch so you can see key elements in dark mode regardless of your current theme preference.</p>
+
+    <div class="sg-dark-preview" data-theme="dark">
+      <p style="font-family:var(--font-display);font-weight:600;font-size:1.5rem;letter-spacing:-0.03em;color:var(--text);margin-bottom:0.25rem">Yashodhan<em style="color:var(--accent);font-style:normal">.</em></p>
+      <p style="font-size:0.7rem;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.5rem">Lead Product Designer</p>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.25rem">
+        <a href="#" class="btn btn--primary" onclick="return false">View Projects</a>
+        <a href="#" class="btn btn--ghost" onclick="return false">About me</a>
+      </div>
+      <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1.25rem">
+        <span class="tag">Design Systems</span>
+        <span class="tag">Fintech</span>
+        <span class="tag">AI</span>
+      </div>
+      <div class="feature-block" style="padding:1.25rem">
+        <div>
+          <p class="feature-block__label">Founder · 2024</p>
+          <p style="font-weight:580;font-size:0.9375rem;color:var(--text);letter-spacing:-0.01em">Order.law</p>
+          <p style="font-size:0.825rem;color:var(--text-3);margin-top:0.25rem">AI-powered legal research platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</BaseLayout>
+
+<style>
+  /* ============ STYLEGUIDE LAYOUT ============ */
+
+  .sg-wrap {
+    max-width: 860px;
+    padding-bottom: 4rem;
+  }
+
+  /* Header */
+  .sg-header {
+    padding: 1rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3rem;
+  }
+
+  .sg-header__label {
+    font-size: 0.675rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .sg-header__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+  }
+
+  .sg-header__desc {
+    font-size: 0.9375rem;
+    color: var(--text-2);
+    max-width: 52ch;
+    line-height: 1.7;
+  }
+
+  /* Section */
+  .sg-section {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sg-section:last-child {
+    border-bottom: none;
+  }
+
+  .sg-section__title {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sg-section__note {
+    font-size: 0.85rem;
+    color: var(--text-3);
+    line-height: 1.65;
+    max-width: 62ch;
+    margin-bottom: 2rem;
+  }
+
+  .sg-section__note code {
+    font-size: 0.8em;
+    background: var(--bg-2);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+
+  .sg-section__note strong {
+    font-weight: 600;
+    color: var(--text-2);
+  }
+
+  /* Colour grid */
+  .sg-color-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sg-color-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sg-color-row:first-child { border-top: 1px solid var(--border); }
+
+  .sg-color-chips {
+    display: flex;
+    gap: 4px;
+  }
+
+  .sg-chip {
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
+  .sg-color-info {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .sg-color-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    white-space: nowrap;
+  }
+
+  .sg-color-values code {
+    font-size: 0.75rem;
+    background: var(--bg-2);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    color: var(--text-2);
+  }
+
+  .sg-color-usage {
+    font-size: 0.8rem;
+    color: var(--text-3);
+  }
+
+  /* Type stack */
+  .sg-type-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sg-type-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sg-type-row:first-child { border-top: 1px solid var(--border); }
+
+  @media (max-width: 600px) {
+    .sg-type-row { grid-template-columns: 1fr; gap: 0.75rem; }
+  }
+
+  .sg-type-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 3px;
+  }
+
+  .sg-type-label code {
+    font-size: 0.775rem;
+    background: var(--bg-2);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    color: var(--text);
+    display: inline-block;
+    width: fit-content;
+  }
+
+  .sg-type-label span {
+    font-size: 0.7rem;
+    color: var(--text-3);
+    line-height: 1.5;
+  }
+
+  .sg-type-sample { padding: 0; }
+
+  /* Token grid */
+  .sg-token-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--border-med);
+    border: 1px solid var(--border-med);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .sg-token {
+    background: var(--surface);
+    padding: 1.125rem 1.25rem;
+  }
+
+  .sg-token__name code {
+    font-size: 0.75rem;
+    background: var(--bg-2);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+
+  .sg-token__val {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin: 0.375rem 0 0.2rem;
+  }
+
+  .sg-token__desc {
+    font-size: 0.775rem;
+    color: var(--text-3);
+    line-height: 1.5;
+  }
+
+  /* Component rows */
+  .sg-component-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .sg-component-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .sg-component-label {
+    font-size: 0.725rem;
+    color: var(--text-3);
+  }
+
+  .sg-component-label code {
+    font-size: 0.875em;
+    background: var(--bg-2);
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+  }
+
+  /* Demo block */
+  .sg-demo-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+
+  /* Dark preview */
+  .sg-dark-preview {
+    background: #111009;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+</style>
+</BaseLayout>

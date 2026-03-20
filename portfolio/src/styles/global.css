@@ -89,7 +89,7 @@ button { font-family: var(--font-sans); }
 .sidebar__logo {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
   color: var(--text);
   letter-spacing: -0.02em;
   line-height: 1;
@@ -222,7 +222,7 @@ main {
 .mobile-nav__logo {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.9375rem;
   color: var(--text);
 }
 

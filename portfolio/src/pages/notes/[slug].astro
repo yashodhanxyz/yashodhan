@@ -18,7 +18,12 @@ function formatDate(d: Date) {
 }
 ---
 
-<BaseLayout title={note.data.title} description={note.data.description}>
+<BaseLayout
+  title={note.data.title}
+  description={note.data.description}
+  ogType="article"
+  publishedDate={note.data.date.toISOString()}
+>
   <div class="container">
 
     <a href="/notes" class="back-link">← Notes</a>
